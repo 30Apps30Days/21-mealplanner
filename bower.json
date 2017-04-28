@@ -17,6 +17,9 @@
     "tests"
   ],
   "dependencies": {
-    "material-design-lite": "^1.3.0"
+    "material-design-lite": "^1.3.0",
+    "md-date-time-picker": "^2.3.0",
+    "duil": "^0.1.3",
+    "font-awesome": "fontawesome#^4.7.0"
   }
 }

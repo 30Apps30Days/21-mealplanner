@@ -18,14 +18,41 @@
     <link rel="stylesheet" href="lib/material-design-lite/material.min.css" />
     <script src="lib/material-design-lite/material.min.js"></script>
     <link rel="stylesheet" href="lib/material-icons-font/icon.css" />
+    <link rel="stylesheet" href="lib/md-date-time-picker/dist/css/mdDateTimePicker.min.css">
+    <link rel="stylesheet" href="lib/font-awesome/css/font-awesome.min.css" />
     <link rel="stylesheet" href="app/index.css" />
   </head>
   <body>
-    <div id="app" class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer">
+    <div id="app" class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer
+      mdl-layout--fixed-header">
+
+      <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+<!--           <button class="btn-prev mdl-button mdl-js-button mdl-button--icon">
+            <i class="material-icons">chevron_left</i>
+          </button> -->
+
+          <span class="txt-date mdl-layout-title">Thu, Apr 27</span>
+
+<!--           <button class="btn-next mdl-button mdl-js-button mdl-button--icon">
+            <i class="material-icons">chevron_right</i>
+          </button> -->
+
+          <div class="mdl-layout-spacer"></div>
+          <button class="btn-date mdl-button mdl-js-button mdl-button--icon">
+            <i class="material-icons">date_range</i>
+          </button>
+        </div>
+      </header>
+
       <div class="mdl-layout__drawer">
         <span class="mdl-layout-title">Meal Planner</span>
 
         <form id="options" action="#">
+        <br />
+        <p>
+          Plan your meals ahead.
+        </p>
         </form>
 
         <footer>
@@ -36,16 +63,93 @@
             </a>
           </nav>
 
-          Idea by PLACEHOLDER<br />
+          Idea by Leah Garland.<br />
           App by <a href="http://metaist.com">Metaist LLC</a>
         </footer>
 
       </div>
-      <main class="mdl-layout__content page-content">
+      <main class="mdl-layout__content">
+
+        <div class="page-content">
+          <h2>Breakfast</h2>
+          <ul class="mdl-list" data-meal="breakfast">
+            <li class="mdl-list__item">
+              <span class="mdl-list__item-primary-content">
+              </span>
+              <button class="btn-remove mdl-list__item-secondary-action mdl-button mdl-js-button mdl-button--icon"><i class="fa fa-minus"></i></button>
+            </li>
+          </ul>
+
+          <ul class="aoaa mdl-list">
+            <li class="mdl-list__item">
+              <div class="mdl-list__item-primary-content mdl-textfield mdl-js-textfield">
+                <input class="mdl-textfield__input" type="text" id="add-breakfast">
+                <label class="mdl-textfield__label" for="add-breakfast">Add dish...</label>
+              </div>
+
+              <button class="btn-add mdl-list__item-secondary-action mdl-button mdl-js-button mdl-button--icon">
+                <i class="fa fa-plus"></i>
+              </button>
+            </li>
+          </ul>
+
+
+          <h2>Lunch</h2>
+          <ul class="mdl-list" data-meal="lunch">
+            <li class="mdl-list__item">
+              <span class="mdl-list__item-primary-content">
+              </span>
+              <button class="btn-remove mdl-list__item-secondary-action mdl-button mdl-js-button mdl-button--icon"><i class="fa fa-minus"></i></button>
+            </li>
+          </ul>
+
+          <ul class="aoaa mdl-list">
+            <li class="mdl-list__item">
+              <div class="mdl-list__item-primary-content mdl-textfield mdl-js-textfield">
+                <input class="mdl-textfield__input" type="text" id="add-lunch">
+                <label class="mdl-textfield__label" for="add-lunch">Add dish...</label>
+              </div>
+
+              <button class="btn-add mdl-list__item-secondary-action mdl-button mdl-js-button mdl-button--icon">
+                <i class="fa fa-plus"></i>
+              </button>
+            </li>
+          </ul>
+
+          <h2>Dinner</h2>
+
+          <ul class="mdl-list" data-meal="dinner">
+            <li class="mdl-list__item">
+              <span class="mdl-list__item-primary-content">
+              </span>
+              <button class="btn-remove mdl-list__item-secondary-action mdl-button mdl-js-button mdl-button--icon"><i class="fa fa-minus"></i></button>
+            </li>
+          </ul>
+
+          <ul class="aoaa mdl-list">
+            <li class="mdl-list__item">
+              <div class="mdl-list__item-primary-content mdl-textfield mdl-js-textfield">
+                <input class="mdl-textfield__input" type="text" id="add-dinner">
+                <label class="mdl-textfield__label" for="add-dinner">Add dish...</label>
+              </div>
+
+              <button class="btn-add mdl-list__item-secondary-action mdl-button mdl-js-button mdl-button--icon">
+                <i class="fa fa-plus"></i>
+              </button>
+            </li>
+          </ul>
+        </div>
       </main>
     </div>
 
     <script src="cordova.js"></script>
+
+    <script src="lib/lodash/dist/lodash.min.js"></script>
+    <script src="lib/jquery/dist/jquery.min.js"></script>
+    <script src="lib/jquery/dist/jquery.min.js"></script>
+    <script src="lib/duil/dist/duil.min.js"></script>
+    <script src="lib/moment/min/moment.min.js"></script>
+    <script src="lib/md-date-time-picker/dist/js/mdDateTimePicker.js"></script>
     <script src="app/index.js"></script>
   </body>
 </html>

@@ -57,7 +57,6 @@ footer a {
   display: block;
 }
 
-.mdl-layout__content { overflow: hidden; }
 
 .center-center {
   position: absolute;
@@ -72,4 +71,24 @@ footer a {
 
   text-align: center;
   vertical-align: center;
+}
+
+.page-content {
+  padding: 1em;
+}
+
+.btn-add {
+  float: right;
+  cursor: pointer;
+}
+
+h2 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.mdl-list {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
